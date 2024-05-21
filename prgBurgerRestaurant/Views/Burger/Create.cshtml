@@ -1,0 +1,38 @@
+﻿@model prgBurgerRestaurant.Models.BurgerChoices
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1><center>Order</center></h1>
+
+<h4><center>Burgers</center></h4>
+<hr />
+<center>
+    <div class="align-content-center">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Choice" class="control-label"></label>
+                    <select asp-for="Choice" asp-items="ViewBag.UserChoices" class="form-control">
+                    </select>
+                </div>
+                <br />
+                <div class="form-group">
+                    <input type="submit" value="Add to menu" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</center>
+
+<center>
+    <div>
+        <a asp-action="Index">Back to Order</a>
+    </div>
+</center>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

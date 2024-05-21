@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<style>.box
+{
+        background-color: rgb(255 255 255 / 30%);
+        backdrop-filter: blur(10px);
+}
+
+body 
+{
+        background-image: url("Images/2.png");
+        background-size:cover;
+}
+
+</style>
+
+
+<div class="container">
+    <div class="box">
+        <div class="text-center">
+        <img src="~/Images/1.png" alt="Image" width="300px" />
+        <h1 class="display-4"><b>@ViewBag.Welcome</b></h1>
+        <h2>@ViewBag.Message</h2>
+        <u><a class="nav-link text-danger" asp-area="" asp-controller="Burger" asp-action="Index">Menu</a></u>
+        <br />
+        <br />
+        <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        </div>
+    </div>
+</div>
+
+
+
